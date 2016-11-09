@@ -4,6 +4,10 @@
  * The header for a subclass of the scoreboard.h interface
  */
 
+#include <vector>
+
+using namespace std;
+
 #ifndef SCOREBOARD_H_
 #define SCOREBOARD_H_
 
@@ -37,5 +41,7 @@ class Scoreboard
      *  every period
      */
     void clearScoreboard();
+  private:
+    vector<vector<int> >scores;
 };
 #endif /* SCOREBOARD_H_ */
