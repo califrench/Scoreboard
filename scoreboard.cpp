@@ -11,7 +11,7 @@ void Scoreboard::clearScoreboard() {
          scores[i][j] = 0;
       }
    }
-
+}
 
 /**
  * Sets the score for a given competition and a given period
