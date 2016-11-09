@@ -5,6 +5,7 @@
  */
 
 #include <vector>
+#include <climits>
 #include "IScoreboard.h"
 
 using namespace std;

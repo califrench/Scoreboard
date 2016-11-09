@@ -4,7 +4,6 @@
  * The implementation of the scoreboard.h interface
  */
 
-
 #include "scoreboard.h"
 
 /**
@@ -28,12 +27,12 @@ void Scoreboard::setScore(int competitor, int period, int score) {
 
     if (competitor >= scores.size()) {
         for (int i = scores.size(); i < competitor; i++) {
-            scores.push_back(vector<int>);
+            scores.push_back(vector<int>());
         }
     }
 
     if (period >= scores[competitor].size()) {
-        for (int i = scores[competitor].size(); i < period) {
+        for (int i = scores[competitor].size(); i < period; i++) {
             scores[competitor].push_back(0);
         }
     }
@@ -50,13 +49,11 @@ void Scoreboard::setScore(int competitor, int period, int score) {
  */
 int Scoreboard::getScore(int competitor, int period)
 {
-   if (competitor <= competitor_size && period <= period_size)
-   {
+    if (competitor < scores.size() && period < scores[competitor].size())
+    {
       return scores[competitor][period];
-   }
-
-   else
-      return -1;
+    }
+    return INT_MIN;
 }
 
 /**
@@ -86,3 +83,10 @@ void Scoreboard::clearScoreboard() {
          scores[i][j] = 0;
       }
    }
+}
+
+/** For shits */
+int main(int argc,char *argv[])
+{
+    
+}
