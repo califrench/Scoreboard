@@ -50,9 +50,8 @@ void Scoreboard::setScore(int competitor, int period, int score) {
  */
 int Scoreboard::getScore(int competitor, int period)
 {
-    if (competitor < scores.size() && period < scores[competitor].size())
-    {
-      return scores[competitor][period];
+    if (competitor < scores.size() && period < scores[competitor].size()) {
+        return scores[competitor][period];
     }
     return INT_MIN;
 }
@@ -63,31 +62,27 @@ int Scoreboard::getScore(int competitor, int period)
  * @return the total score
  */
 int Scoreboard::getTotalScore(int competitor) {
-  int totalScore = 0;
+    int totalScore = 0;
 
-  if (competitor < 1 || competitor > scores.size())
-    return 0; //out of range
+    if (competitor < 1 || competitor > scores.size()) {
+        return INT_MIN; //out of range
+    }
 
-  for (int i = 1; i <= scores[competitor].size(); ++i)
-  {
-    totalScore += getScore(competitor, i);
-  }
+    for (int i = 1; i <= scores[competitor].size(); ++i) {
+        totalScore += getScore(competitor, i);
+    }
 
-  return totalScore;
+    return totalScore;
 }
 
 
-
+/**
+ * Clears the scroeboard of all scores
+ */
 void Scoreboard::clearScoreboard() {
-   for(unsigned int i = 0; i < scores.size(); ++i) {
-      for(unsigned int j = 0; j < scores[i].size(); ++j) {
-         scores[i][j] = 0;
-      }
-   }
-}
-
-/** For shits */
-int main(int argc,char *argv[])
-{
-    
+    for (unsigned int i = 0; i < scores.size(); ++i) {
+        for (unsigned int j = 0; j < scores[i].size(); ++j) {
+            scores[i][j] = 0;
+        }
+    }
 }

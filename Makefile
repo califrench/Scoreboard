@@ -1,8 +1,9 @@
 G = g++
-FLAGS = -g -std=c++11 -Wall -W -Werror -pedantic
+FLAGS = -g -c -std=c++11 -Wall -W -Werror -pedantic
 
-scoreboard: scoreboard.o 
-	$(G) $(FLAGS) -o scoreboard.out scoreboard.o
+# This is useless since our object will be used in other programs
+# scoreboard: scoreboard.o 
+# 	$(G) $(FLAGS) -o scoreboard.out scoreboard.o
 
 scoreboard.o: scoreboard.cpp scoreboard.h IScoreboard.h
 
