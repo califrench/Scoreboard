@@ -11,4 +11,16 @@ void Scoreboard::clearScoreboard() {
          scores[i][j] = 0;
       }
    }
+
+//Taylor, Forrest
+int Scoreboard::getScore(int competitor, int period, int score)
+{
+   if (competitor <= competitor_size && period <= period_size)
+   {
+      score = scores[competitor][period];
+      return score;
+   }
+
+   else
+      return -1;
 }
