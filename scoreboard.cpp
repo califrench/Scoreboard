@@ -6,6 +6,7 @@
 
 #include "scoreboard.h"
 
+
 /**
  * Sets the score for a given competition and a given period
  *
