@@ -4,6 +4,7 @@
  * The implementation of the scoreboard.h interface
  */
 
+
 /**
  * Sets the score for a given competition and a given period
  *
