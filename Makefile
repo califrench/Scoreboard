@@ -8,3 +8,4 @@ scoreboard.o: scoreboard.cpp scoreboard.h IScoreboard.h
 
 clean:
 	rm -f *.o scoreboard.out
+
