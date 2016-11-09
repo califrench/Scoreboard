@@ -5,13 +5,14 @@
  */
 
 #include <vector>
+#include "IScoreboard.h"
 
 using namespace std;
 
 #ifndef SCOREBOARD_H_
 #define SCOREBOARD_H_
 
-class Scoreboard
+class Scoreboard : public IScoreboard
 {
   public:
     /*
