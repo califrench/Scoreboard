@@ -9,8 +9,8 @@
 
 using namespace std;
 
-#ifndef SCOREBOARD_H_
-#define SCOREBOARD_H_
+#ifndef SCOREBOARD_H
+#define SCOREBOARD_H
 
 class Scoreboard : public IScoreboard
 {
@@ -45,4 +45,4 @@ class Scoreboard : public IScoreboard
   private:
     vector<vector<int> >scores;
 };
-#endif /* SCOREBOARD_H_ */
+#endif /* SCOREBOARD_H */

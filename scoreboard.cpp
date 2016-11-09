@@ -4,6 +4,7 @@
  * The implementation of the scoreboard.h interface
  */
 
+#include "scoreboard.h"
 
 /**
  * Sets the score for a given competition and a given period
@@ -16,7 +17,7 @@
  * @param period the period to set the score for
  * @param score the score to set
  */
-void scoreboard::setScore(int competitor, int period, int score) {
+void Scoreboard::setScore(int competitor, int period, int score) {
     competitor--;
     period--;
 
