@@ -4,7 +4,6 @@
  * The implementation of the scoreboard.h interface
  */
 
-
 /**
  * Sets the score for a given competition and a given period
  *
@@ -38,3 +37,22 @@ void scoreboard::setScore(int competitor, int period, int score) {
 
     scores[competitor][period] = score;
 }
+
+
+/**
+ * Gets the score for a given competitor and period
+ * @param  competitor the competitor to get the score for
+ * @param  period the period to get the score for
+ * @return the score
+ */
+int Scoreboard::getScore(int competitor, int period)
+{
+   if (competitor <= competitor_size && period <= period_size)
+   {
+      return scores[competitor][period];
+   }
+
+   else
+      return -1;
+}
+
