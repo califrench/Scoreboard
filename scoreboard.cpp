@@ -6,12 +6,11 @@
 #include "Scoreboard.h"
 
 //Taylor, Forrest
-int Scoreboard::getScore(int competitor, int period, int score)
+int Scoreboard::getScore(int competitor, int period)
 {
    if (competitor <= competitor_size && period <= period_size)
    {
-      score = scores[competitor][period];
-      return score;
+      return scores[competitor][period];
    }
 
    else
