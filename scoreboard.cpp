@@ -24,7 +24,7 @@ void Scoreboard::clearScoreboard() {
  * @param period the period to set the score for
  * @param score the score to set
  */
-void scoreboard::setScore(int competitor, int period, int score) {
+void Scoreboard::setScore(int competitor, int period, int score) {
     competitor--;
     period--;
 
@@ -70,7 +70,7 @@ int Scoreboard::getScore(int competitor, int period)
  * @param  competitor the competitor to get the total score for
  * @return the total score
  */
-int getTotalScore(int competitor) {
+int Scoreboard::getTotalScore(int competitor) {
   int totalScore = 0;
 
   if (competitor < 1 || competitor > scores.size())
