@@ -16,7 +16,7 @@ using namespace std;
 class Scoreboard : public IScoreboard
 {
   public:
-    Scoreboard(int competitor,int period);
+    Scoreboard(int competitors,int periods);
     /*
      * void setScore(int,int,int)
      *  Sets the score for one competitor for a given period. Out of range

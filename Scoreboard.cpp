@@ -6,9 +6,19 @@
 
 #include "Scoreboard.h"
 
-Scoreboard::Scoreboard(int competitor, int period){
-//ours is variable so the constructor doesn't need anything?
+
+/**
+ * Initializes a scoreboard with the specified dimensions
+ * 
+ * @param  competitors the number of competitors
+ * @param  periods the number of periods
+ * @return the scoreboard
+ */
+Scoreboard::Scoreboard(int competitors, int periods){
+    scores = vector<vector<int> >(competitors, vector<int>(periods, 0));
 }
+
+
 /**
  * Sets the score for a given competition and a given period
  *
@@ -24,22 +34,11 @@ void Scoreboard::setScore(int competitor, int period, int score) {
     competitor--;
     period--;
 
-    if (competitor < 0 || period < 0) {
+    if (competitor < 0 || period < 0 || competitor >= scores.size() || period >= scores[competitor].size()) {
         return;
     }
 
-    if (competitor >= scores.size()) {
-        for (int i = scores.size(); i < competitor; i++) {
-            scores.push_back(vector<int>());
-        }
-    }
-
-    if (period >= scores[competitor].size()) {
-        for (int i = scores[competitor].size(); i < period; i++) {
-            scores[competitor].push_back(0);
-        }
-    }
-
+    
     scores[competitor][period] = score;
 }
 
@@ -50,9 +49,10 @@ void Scoreboard::setScore(int competitor, int period, int score) {
  * @param  period the period to get the score for
  * @return the score
  */
-int Scoreboard::getScore(int competitor, int period)
-{
-    if (competitor < scores.size() && period < scores[competitor].size()) {
+int Scoreboard::getScore(int competitor, int period) {
+    competitor--;
+    period--;   
+    if (competitor >= 0 && competitor < scores.size() && period >= 0 && period < scores[competitor].size()) {
         return scores[competitor][period];
     }
     return INT_MIN;
