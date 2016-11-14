@@ -4,9 +4,11 @@
  * The implementation of the scoreboard.h interface
  */
 
-#include "scoreboard.h"
+#include "Scoreboard.h"
 
-
+Scoreboard::Scoreboard(int competitor, int period){
+//ours is variable so the constructor doesn't need anything?
+}
 /**
  * Sets the score for a given competition and a given period
  *
