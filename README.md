@@ -34,4 +34,5 @@ For Rock Paper Scisors app, we would use IScoreboard as our model.
 
 A RockPaperScisors class that inherets from the IScorebaord interface, which is the controller. 
 
-Also, a Game class that works as our view to call the IScoreboard functions.
+Also, a Game class that works as our view to call the IScoreboard functions and display the information received.
+
