@@ -22,7 +22,8 @@ For more information about the **adapter** pattern, please refer to [the Wikiped
 
 ### Proxy
 
-Our scoreboard implementation also leverages the **proxy** design pattern.
+Our scoreboard implementation also leverages the **proxy** design pattern.  
+Indeed, our scoreboard is acting as a proxy to a vector of vectors to provide access to it. This is also how we are restricting access, preventing the resizing of the internal vectors and checking for out of bounds access.
 
 >Provide a surrogate or placeholder for another object to control access to it.  
 
