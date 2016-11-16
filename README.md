@@ -27,3 +27,11 @@ Our scoreboard implementation also leverages the **proxy** design pattern.
 >Provide a surrogate or placeholder for another object to control access to it.  
 
 For more information about the **proxy** pattern, please refer to [the Wikipedia article on the proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
+
+## Rock Paper Scisors
+
+For Rock Paper Scisors app, we would use IScoreboard as our model. 
+
+A RockPaperScisors class that inherets from the IScorebaord interface, which is the controller. 
+
+Also, a Game class that works as our view to call the IScoreboard functions.
