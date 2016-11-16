@@ -1,5 +1,8 @@
 # About the Scoreboard
 
+## Design: We were given an abstract class that defines the functionality of a scoreboard. We then decided on a good data structure and implemented the functionality to work correctly with our data structure.
+
+
 ## Design Patterns
 
 Our Scoreboard implementation leverages two common structural design patterns:  
@@ -24,4 +27,3 @@ Our scoreboard implementation also leverages the **proxy** design pattern.
 >Provide a surrogate or placeholder for another object to control access to it.  
 
 For more information about the **proxy** pattern, please refer to [the Wikipedia article on the proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
-
