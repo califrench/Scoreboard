@@ -28,6 +28,7 @@ Our scoreboard implementation also leverages the **proxy** design pattern.
 
 For more information about the **proxy** pattern, please refer to [the Wikipedia article on the proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
 
+
 ## Rock Paper Scisors
 
 For Rock Paper Scisors app, we would use IScoreboard as our model. 
@@ -36,3 +37,6 @@ A RockPaperScisors class that inherets from the IScorebaord interface, which is 
 
 Also, a Game class that works as our view to call the IScoreboard functions and display the information received.
 
+### Classes
+#### MVC Architecture
+#### Relationships
