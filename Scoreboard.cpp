@@ -34,7 +34,8 @@ void Scoreboard::setScore(int competitor, int period, int score) {
     competitor--;
     period--;
 
-    if (competitor < 0 || period < 0 || competitor >= scores.size() || period >= scores[competitor].size()) {
+    if (competitor < 0 || period < 0 || (unsigned int)competitor >= scores.size() ||
+     (unsigned int)period >= scores[competitor].size()) {
         return;
     }
 
@@ -52,7 +53,8 @@ void Scoreboard::setScore(int competitor, int period, int score) {
 int Scoreboard::getScore(int competitor, int period) {
     competitor--;
     period--;   
-    if (competitor >= 0 && competitor < scores.size() && period >= 0 && period < scores[competitor].size()) {
+    if (competitor >= 0 && (unsigned int)competitor < scores.size() && period >= 0 &&
+     (unsigned int)period < scores[competitor].size()) {
         return scores[competitor][period];
     }
     return INT_MIN;
@@ -66,11 +68,11 @@ int Scoreboard::getScore(int competitor, int period) {
 int Scoreboard::getTotalScore(int competitor) {
     int totalScore = 0;
 
-    if (competitor < 1 || competitor > scores.size()) {
+    if (competitor < 1 || (unsigned int)competitor > scores.size()) {
         return INT_MIN; //out of range
     }
 
-    for (int i = 1; i <= scores[competitor].size(); ++i) {
+    for (unsigned int i = 1; i <= scores[competitor].size(); ++i) {
         totalScore += getScore(competitor, i);
     }
 
