@@ -7,13 +7,14 @@
 #include <vector>
 #include <climits>
 #include "IScoreboard.h"
+#include "ObserverPattern.hpp"
 
 using namespace std;
 
 #ifndef SCOREBOARD_H
 #define SCOREBOARD_H
 
-class Scoreboard : public IScoreboard
+class Scoreboard : public IScoreboard, public IObserver
 {
   public:
     Scoreboard(int competitors,int periods);
