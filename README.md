@@ -3,6 +3,7 @@ Caleb Alexander
 Scot Gauthreaux
 Hunter Mayers
 Forrest Taylor 
+Chris Maul
 Austin Tilton
 
 # About the Scoreboard
