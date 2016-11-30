@@ -41,6 +41,7 @@ void Scoreboard::setScore(int competitor, int period, int score) {
 
     
     scores[competitor][period] = score;
+    notifyObservers();
 }
 
 
@@ -89,4 +90,5 @@ void Scoreboard::clearScoreboard() {
             scores[i][j] = 0;
         }
     }
+    notifyObservers();
 }
