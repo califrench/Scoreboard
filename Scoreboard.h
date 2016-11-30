@@ -14,7 +14,7 @@ using namespace std;
 #ifndef SCOREBOARD_H
 #define SCOREBOARD_H
 
-class Scoreboard : public IScoreboard, public IObserver
+class Scoreboard : public IScoreboard, public Observable
 {
   public:
     Scoreboard(int competitors,int periods);
