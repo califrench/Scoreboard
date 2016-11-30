@@ -1,3 +1,10 @@
+Keith DeHollander
+Caleb Alexander
+Scot Gauthreaux
+Hunter Mayers
+Forrest Taylor 
+Austin Tilton
+
 # About the Scoreboard
 
 ## Design
